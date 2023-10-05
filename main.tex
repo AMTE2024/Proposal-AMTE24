@@ -1,0 +1,189 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Euro-Par 2024 Workshop Proposal: Asynchronous Many-Task systems for Exascale 2024 (AMTE 2024)
+}
+\author{Patrick Diehl, Zahra katami, Steven R. Brandt, and Parsa Amini }
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+%Your abstract.
+%\end{abstract}
+\section*{Workshop Title}
+Asynchronous Many-Task systems for Exascale 2024
+\section*{Acronym}
+AMTE 2024
+
+\section*{Preference for length}
+We prefer a full day, could be half-day
+
+\section*{Organizers} 
+\begin{itemize}
+\item Patrick Diehl \\
+Patrick Diehl is a member of the STE$\vert\vert$AR group and a researcher at the Center for Computation and Technology at Louisiana State University. In addition, he is an adjunct assistant professor at the Department for Physics and Astronomy. Before joining LSU, he was a postdoctoral fellow at the Laboratory for Multiscale Mechanics at Polytechnique Montreal. Patrick received a diploma in Computer Science from the University of Stuttgart and a Ph.D. in Applied Mathematics from the University of Bonn. His primary research interests are 1) Computational engineering with a focus on Peridynamic material models for application in solids, such as glassy or composite materials, and 2) High-performance computing, especially the asynchronous many task system (AMT), e.g., the C++ standard library for parallelism and concurrency (HPX) for large heterogeneous computations.
+\item Zahra Khatami \\
+Zahra Khatami is working as a Senior Compiler Engineer at NVIDIA. Her research interests mainly focus on supporting new HPC technologies in CPU and GPU compilers. Before joining NVIDIA, she worked at Oracle to design and develop new technologies for their distributed database systems. Her contribution at Oracle extended to developing task-based models for achieving higher parallelism levels in the distributed-memory runtime systems. She completed her Master’s and Ph.D. in Computer Engineering from Louisiana State University (LSU) in 2017. She has since collaborated with the STE$\vert\vert$AR group as an HPX developer at the Center for Computation and Technology at LSU. Her main contribution was developing HPX Smart Executors to leverage AI models to handle HPX runtime parameters automatically.
+\item Steven R. Brandt\\
+Steven R. Brandt obtained his Ph.D. for performing the first numerical simulations of rotating black hole spacetimes in 1996. Currently, he is the Assistant Director for Computational Science at the Center for Computation and Technology at Louisiana State University. Dr. Brandt's research interests are high-performance computing, parallel computing, computing environments, and science gateways. He is a maintainer for the Einstein Toolkit (http://einsteintoolkit.org) and a contributor to the STE$\vert\vert$AR group.
+\item Parsa Amini \\
+Parsa Amini is a member of the STE$\vert\vert$AR group. His research interests include data addressing and relocation in high-performance computing applications, active global address spaces, and high-productivity parallel C++ codes. He has been involved with developing the HPX runtime system and HPX applications such as the Phylanx distributed array toolkit and the Octo-Tiger astrophysics code. Parsa holds a Ph.D. degree in Computer Science from Louisiana State University.
+\end{itemize}
+
+\section*{Tentative program committee} 
+
+\begin{itemize}
+    \item Thomas Heller, Exasol, Germany
+    \item Hartmut Kaiser, Louisiana State University, USA 
+    \item Dirk Pleiter, KTH Royal Institute of Technology in Stockholm
+    \item Roman Iakymchuk, Umea University, Sweden
+    \item Erwin Laure, Max Planck Computing \& Data Facility, Germany
+    \item Laxmikant (Sanjay) V. Kale, University of Illinois at Urbana-Champaign, USA
+    \item Andrew Lumsdaine, Northwest Institute for Advanced Computing, USA
+    \item Patricia Grubel, Los Alamos National Laboratory, USA
+    \item Vassilios Dimakopoulos, University of Ioannina, Greece
+    \item Metin H. Aktulga, Michigan State University, USA
+    \item Galen Shipman, Los Alamos National Laboratory, USA
+    \item Brad Richardson, Sourcery Institute, USA
+    \item Kevin Huck, University of Oregon, USA
+    \item Jeff Hammond, NVIDIA, USA
+    \item Shahrzad Shirzad, Louisiana State University, USA
+    \item Peter Thoman, University of Innsbruck, Austria
+    \item J. "Ram" Ramanujam, Louisiana State University, USA
+    \item Keita Teranishi, Sandia National Laboratory, USA 
+    \item Gerald Baumgartner, Louisiana State University, USA 
+    \item Pat McCormick, Los Alamos National Laboratory, USA
+    \item Daisy Hollman, Google, USA
+    \item Thomas Fahringer, University of Innsbruck, Austria
+    \item Pedro Valero Lara, Oak Ridge National Laboratory, USA 
+    \item Adrian Lemoine, AMD, USA
+    \item Mikael Simberg, Swiss National Supercomputing Centre, Switzerland
+\end{itemize}
+
+
+\section*{Motivation of the workshop}
+
+\subsection*{Scientific objective}
+
+Supercomputers are now beginning to break the exascale barrier, and a tremendous amount of work has been invested in identifying and overcoming the challenges leading up to this moment. These challenges include load-balancing, fast data transfers, and efficient resource utilization.  Task-based models and runtime systems have shown that it is possible to address these challenges by providing additional mechanisms such as oversubscription, task/data locality, shared memory, and data dependence-driven execution. 
+This workshop explores the advantages of task-based programming on modern and future  HPC systems. It will gather developers, users, and proponents of these models and systems to share experience, discuss how they meet the challenges posed by today's heterogeneous Exascale system architectures, and explore opportunities for increased performance, robustness, and full-system utilization.
+
+\subsection*{Interest to the Euro-Par community}
+
+Emerging dynamic programming models and runtime systems shield the programmer from the challenging task of identifying and managing parallelism by delegating this task to the runtime system. Although dozens of different task-based programming systems exist today and are actively used for parallel and high-performance computing (HPC), they are not commonly used in HPC applications and algorithm implementations. For certain kinds of applications, it has been shown that task-based programming systems are beneficial. 
+The workshop's primary purpose is to increase awareness of task-based systems' benefits to the HPC community. 
+It will accomplish this, in part, by sharing experiences of these systems for different kinds of problems/applications running on different kinds of hardware. Another goal of this workshop is to gather task-based runtime experts and developers worldwide to create a stronger community. 
+We will document the panel discussion and make the results available on the workshop’s web page. In addition, we intend to publish a workshop report.
+
+
+\subsection*{Positioning with respect to the currently existing Euro-Par workshops}
+
+To our knowledge, this is the only workshop that focuses on Asynchronous Task-based programming systems.
+
+\section*{Workshop Description}
+
+\subsection*{Content}
+
+The workshop will focus on the following areas:
+\begin{itemize}
+\item Novel task-based runtime environments
+\item Experiences in using task-based runtimes
+\item Environments for large applications
+\item Experiences in comparing task-based runtime environments
+\item Using task-based runtimes on accelerators or heterogeneous architectures.
+\item Experiences gathered from porting one large-scale parallel solution to another, e.g., MPI to Charm++, etc.
+\item Profiling and performance monitoring of task-based environments
+\item Benchmarks for task-based runtimes
+\item Tools for debugging programs using task-based runtimes
+\item Challenges to task-based runtimes in scaling to large clusters
+\item Hardware challenges and solutions in using task-based environments.
+\end{itemize}
+
+\subsection*{Format}
+
+It will be a full-day or half-day workshop with one keynote speaker, one invited talk (if full-day), and a panel (if full-day).
+The tentative schedule for the full-day workshop:
+\begin{itemize}
+\item 9:00 am - 9:05 am, Opening Remarks
+\item 9:05 am - 10:05 am, Keynote Talk  
+\item 10:05 am - 10:20 am, Morning Break
+\item 10:20 am - 10:50 am Selected paper talk
+\item 10:50 am - 11:20 am, Selected paper talk
+\item 11:20 am - 11:50 am, Selected paper talk
+\item 11:50 am - 12:20 pm, Selected paper talk
+\item 12:20 pm - 1:30 pm, Lunch Break 
+\item 1:30 pm - 2:30 pm, Invited talk 
+\item 2:30 pm - 3:00 pm, Selected paper talk
+\item 3:00 pm - 3:30 pm, Selected paper talk
+\item 3:30 pm -3:45 pm Afternoon break
+\item 3:45 pm - 4:45 pm, Panel 
+\end{itemize}
+
+\subsection*{Organizational aspects}
+We will advertise the workshop on appropriate mailing lists, e.g., SIAM CSE, ACM, Grace Hopper, Women in HPC, Women in AI, and Gesellschaft für Informatik. Next, we will promote the workshop on social media and ask our home institutions’ communication and outreach departments for support. In addition, the organizers will compile a list of potential speakers and send personalized invitations to them. 
+
+Workshop organizers value equality and diversity. We will strongly encourage women and BAME to submit papers to this workshop and will make sure to meet the following criteria when choosing speakers and committee members:
+\begin{itemize}
+\item Equity: we will make sure there are no barriers, biases, and obstacles that impede equal access and opportunity to submit papers to the workshop;
+\item Diversity: 
+\begin{itemize}
+\item Committee diversity – we will recruit qualified committee members and reviewers such that the resulting populations are diverse concerning gender, home institutions, geography, and research expertise. In addition, we will try to have a mixed committee containing academic and industrial members. 
+\item Speaker diversity – we will recruit invited speakers and panelists from diverse populations, backgrounds, and research areas to increase diversity in thinking and perspective. For those, we will advertise this workshop in such groups as “Women in HPC,” Women in AI, Grace Hopper conference mailing list.
+\end{itemize}
+\item Inclusion: we will create a workshop program and environment that is free from discrimination and where every participant feels welcome, included, respected, and safe
+\end{itemize}
+
+All the papers submitted to the workshop will be peer-reviewed  (at least three committee members will review each paper). At the end of the workshop, we will publish its proceedings.
+
+\subsection*{Pre-Workshop Timeline and Procedures}
+\begin{itemize}
+    \item Workshop notification: February 24, 2023
+    \item Initial announcing of the workshop: February 28, 2023
+    \item Workshop website development: March 4, 2023
+    \item Launch of call for workshop papers: March 7, 2023
+    \item Deadlines for submission: June 1, 2023
+    \item Organizer meeting: June 2, 2023
+    \item Reviews complete: June 27, 2023
+    \item Reviewer committee meeting: June 28, 2023
+    \item Notification of acceptance: June 30, 2023
+    \item Revisions of accepted papers due: August 1, 2023
+    \item Finalize program: August 3, 2023
+    \item Workshop date: August 28 or 29, 2023
+    \item After the workshop website update: September 15, 2023
+    \item Workshop management report: September 10, 2023
+\end{itemize}
+
+\subsection*{Workshop background}
+This is the fourth proposal for the AMTE workshop as a part of the Euro-Par conference. The first workshop was held in 2021 as a full-day workshop, and five papers were accepted. The workshop included one keynote and one panel. The second workshop was part of the Euro-Par 2022 conference and was held as a half-day workshop. We had three papers, a keynote, and an invited talk. The third workshop was part of the Euro-Par 2023 conference and was held as a half-day workshop. We had four papers, a keynote, and an invited talk. The panel titled Task-Based Algorithms and Applications (TBAA 2020), was accepted at Supercomputing 2020, and its proceedings are published at \url{https://www.osti.gov/biblio/1764191/}. We intend to publish a similar workshop report for this event as well. In February 2023, the Workshop on Asynchronous Many-Task Systems and Applications will be held at LSU. We received 15 talks, and we will have three keynotes.
+
+\subsection*{Link to international projects/initiatives}
+\begin{itemize}
+    \item https://gitlab.inria.fr/openmp/libkomp
+    \item https://juliacomputing.com/
+    \item https://legion.stanford.edu/
+    \item https://stellar-group.org/
+    \item https://github.com/STEllAR-GROUP/hpx
+    \item https://github.com/STEllAR-GROUP/octotiger
+    \item https://github.com/STEllAR-GROUP/phylanx
+    \item https://charmplusplus.org/
+    \item http://charm.cs.illinois.edu/research/charm
+    \item https://www.ks.uiuc.edu/Research/namd/
+    \item https://github.com/kokkos/kokkos
+    \item https://github.com/NVIDIA/libcudacxx
+\end{itemize}
+
+
+\end{document}
